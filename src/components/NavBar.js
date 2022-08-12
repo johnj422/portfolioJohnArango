@@ -56,7 +56,7 @@ export default function NavBar() {
                                 <a href='https://wa.me/+573186195671' target="_blank"><img src={navIcon4} alt='Email' /></a>
                             </div>
                             <HashLink to='#connect'>
-                                <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+                                <button className='vvd'><span>Let's Connect</span></button>
                             </HashLink>
                         </span>
                     </Navbar.Collapse>

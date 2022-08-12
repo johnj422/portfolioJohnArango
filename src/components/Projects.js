@@ -4,43 +4,45 @@ import projImg1 from '../assets/img/projImg1.png';
 import projImg2 from '../assets/img/projImg2.png';
 import ProjectCards from './ProjectCards';
 import colorSharp2 from '../assets/img/color-sharp2.png';
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 export default function Projects() {
     const projects = [
 
         {
+            title: 'Adoptame',
+            description: `Henry Bootcamp, Bogotá Colombia.
+            • Create and develop an app that allows the adoption of animals to operate in five Latin American countries.`,
+            imgUrl: projImg2,
+            url: 'https://adoptame.vercel.app/',
+        },
+        {
             title: 'Get Them All Videogames',
             description: 'Project Description',
             imgUrl: projImg1,
+            url: 'https://get-them-all-videogames.vercel.app/',
         },
         {
             title: 'Adoptame',
             description: 'Project Description',
             imgUrl: projImg2,
+            url: 'https://adoptame.vercel.app/',
         },
-        {
-            title: 'Adoptame',
-            description: 'Project Description',
-            imgUrl: projImg2,
-        },
-
-    ]
+    ];
+    
     return (
-        <section className='project' id='projects'>
+        <Router>
+        <section className='project' id='project'>
             <Container>
                 <Row>
                     <Col size={12}>
-                    <TrackVisibility>
-                        {({isVisible}) => 
-                            <div className={isVisible ? 'animate__animated animate__bounce' : ''}>
+                            <div>
                             <h2>Projects</h2>
                             <p>Descripción</p>
-                            </div>}
-                            </TrackVisibility>
+                            </div>
                             <Tab.Container id='projects-tabs' defaultActiveKey='first'>
-                                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills">
+                                {/* <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills">
                                     <Nav.Item>
                                         <Nav.Link eventKey="first">Tab One</Nav.Link>
                                     </Nav.Item>
@@ -50,7 +52,7 @@ export default function Projects() {
                                     <Nav.Item>
                                         <Nav.Link eventKey="third">Tab Three</Nav.Link>
                                     </Nav.Item>
-                                </Nav>
+                                </Nav> */}
                                 <Tab.Content>
                                     <Tab.Pane eventKey='first'>
                                         <Row>
@@ -62,17 +64,16 @@ export default function Projects() {
                                                             {...project}
                                                         />
                                                     )
-
                                                 })
                                             }
                                         </Row>
                                     </Tab.Pane>
-                                    <Tab.Pane eventKey='second'>
+                                    {/* <Tab.Pane eventKey='second'>
                                         <p>Test</p>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey='third'>
                                         <p>Test</p>
-                                    </Tab.Pane>
+                                    </Tab.Pane> */}
                                 </Tab.Content>
                             </Tab.Container>
                     </Col>
@@ -80,5 +81,6 @@ export default function Projects() {
             </Container>
             <img className='background-image-right' src={colorSharp2} alt='' />
         </section>
+        </Router>
     )
 }

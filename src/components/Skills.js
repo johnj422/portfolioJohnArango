@@ -17,7 +17,6 @@ import colorSharp from '../assets/img/color-sharp.png'
 export default function Skills() {
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5
         },
@@ -36,62 +35,58 @@ export default function Skills() {
     };
     return (
         <section className='skill' id='skills'>
-            <Container>
-                <Row>
-                    <Col>
-                        <div className='skill-bx'>
-                            <h2>
-                                Tech Skills
-                            </h2>
-
-                            <Carousel responsive={responsive} infinite={true} className='skill-slider'>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="skill-bx wow zoomIn">
+                            <h2>Tech Skills</h2>
+                            <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                                 <div className='item'>
-                                    <img src={JavaScript} alt='' />
+                                    <img src={JavaScript} alt='JavaScript' />
                                     <h5>JavaScript</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={ReactLogo} alt='' />
+                                    <img src={ReactLogo} alt='React' />
                                     <h5>React</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={ReduxLogo} alt='' />
+                                    <img src={ReduxLogo} alt='Redux' />
                                     <h5>Redux</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={NodeLogo} alt='' />
+                                    <img src={NodeLogo} alt='Node' />
                                     <h5>NodeJS</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={ExpressLogo} alt='' />
+                                    <img src={ExpressLogo} alt='Express' />
                                     <h5>Express</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={PostgreSQL} alt='' />
+                                    <img src={PostgreSQL} alt='PostgreSQL' />
                                     <h5>PostgreSQL</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={SequelizeLogo} alt='' />
+                                    <img src={SequelizeLogo} alt='Sequelize' />
                                     <h5>Sequelize</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={HtmlLogo} alt='' />
+                                    <img src={HtmlLogo} alt='HTML' />
                                     <h5>HTML</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={CssLogo} alt='' />
+                                    <img src={CssLogo} alt='CSS' />
                                     <h5>CSS</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={Scrum} alt='' />
+                                    <img src={Scrum} alt='Scrum' />
                                     <h5>Scrum</h5>
                                 </div>
-
                             </Carousel>
                         </div>
-                    </Col>
-                </Row>
-            </Container>
-            <img className='background-image-left' src={colorSharp} />
+                    </div>
+                </div>
+            </div>
+            <img className='background-image-left' src={colorSharp} alt='Bg' />
         </section>
     )
 }
