@@ -113,7 +113,7 @@ nav.navbar.scrolled {
 }
 
 nav.navbar a.navbar-brand {
-  width: 25%;
+  /* width: 25%; */
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -332,10 +332,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 
-.banner img {
 
-  transform: scale(1.2);
-}
 
 .txt-rotate>.wrap {
   border-right: 0.08em solid #666;
@@ -620,7 +617,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .footer img {
-  width: 45%;
+  width: 35%;
 }
 
 .footer p {
