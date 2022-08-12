@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import headerImg from '../assets/img/header-img.svg'
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export default function Banner() {
     const [loopNum, setLoopNum] = useState(0);
@@ -49,10 +51,15 @@ export default function Banner() {
             <Container>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7}>
-                        <span className='tagline'>Bienvenid@ a mi Portafolio</span>
-                        <h1>{'Hola, soy John Arango.... un '}<span className='wrap'>{text}</span></h1>
-                        <p>Emprendedor, curioso, autodidacta, con más de 10 años de experiencia en el sector Tecnológico desde la parte comercial. Actualmente estoy dando un giro a mi carrera, buscando nuevos retos como Full Stack Developer. Al estar involucrado tanto tiempo en este sector, decidí aprender cómo funcionan las cosas, así me embarqué en la aventura de la programación y el desarrollo de competencias que me permitieron ejecutar un proyecto individual que abarca Backend y Frontend, así como un proyecto en equipo en el cual hice parte del Front y fue desarrollado con metodologías ágiles en Sprints de una semana.</p>
-                        <button onClick={(e) => linkTo}>Let's Connect <ArrowRightCircle size={25} /></button>
+                        <TrackVisibility>
+                        {({isVisible}) => 
+                            <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
+                                <span className='tagline'>Bienvenid@ a mi Portafolio</span>
+                                <h1>{'Hola, soy John Arango.... un '}<span className='wrap'>{text}</span></h1>
+                                <p>Emprendedor, curioso, autodidacta, con más de 10 años de experiencia en el sector Tecnológico desde la parte comercial. Actualmente estoy dando un giro a mi carrera, buscando nuevos retos como Full Stack Developer. Al estar involucrado tanto tiempo en este sector, decidí aprender cómo funcionan las cosas, así me embarqué en la aventura de la programación y el desarrollo de competencias que me permitieron ejecutar un proyecto individual que abarca Backend y Frontend, así como un proyecto en equipo en el cual hice parte del Front y fue desarrollado con metodologías ágiles en Sprints de una semana.</p>
+                                <button onClick={(e) => linkTo}>Let's Connect <ArrowRightCircle size={25} /></button>
+                            </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt='Header Img'></img>
