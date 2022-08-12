@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import headerImg from '../assets/img/header-img.svg'
 
-
 export default function Banner() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -40,6 +39,10 @@ export default function Banner() {
             setDelta(100);
         }
     }
+    const linkTo = (e) => {
+        return
+        <a href='https://www.linkedin.com/in/john-arango/' target="_blank"></a>
+    }
 
     return (
         <section className='banner' id='home'>
@@ -49,7 +52,7 @@ export default function Banner() {
                         <span className='tagline'>Bienvenid@ a mi Portafolio</span>
                         <h1>{'Hola, soy John Arango.... un '}<span className='wrap'>{text}</span></h1>
                         <p>Emprendedor, curioso, autodidacta, con más de 10 años de experiencia en el sector Tecnológico desde la parte comercial. Actualmente estoy dando un giro a mi carrera, buscando nuevos retos como Full Stack Developer. Al estar involucrado tanto tiempo en este sector, decidí aprender cómo funcionan las cosas, así me embarqué en la aventura de la programación y el desarrollo de competencias que me permitieron ejecutar un proyecto individual que abarca Backend y Frontend, así como un proyecto en equipo en el cual hice parte del Front y fue desarrollado con metodologías ágiles en Sprints de una semana.</p>
-                        <button onClick={() => console.log('conectar')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                        <button onClick={(e) => linkTo}>Let's Connect <ArrowRightCircle size={25} /></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt='Header Img'></img>
