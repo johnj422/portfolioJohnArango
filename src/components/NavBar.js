@@ -53,7 +53,7 @@ export default function NavBar() {
                             <a href='mailto:johnj42.dev@gmail.com' target="_blank"><img src={navIcon3} alt='Email' /></a>
                             <a href='https://wa.me/+573186195671' target="_blank"><img src={navIcon4} alt='Email' /></a>
                         </div>
-                        {/* <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button> */}
+                        <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
                     </span>
                 </Navbar.Collapse>
             </Container>

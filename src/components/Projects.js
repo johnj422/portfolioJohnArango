@@ -26,14 +26,14 @@ export default function Projects() {
 
     ]
     return (
-        <section className='project' id='project'>
+        <section className='project' id='projects'>
             <Container>
                 <Row>
                     <Col size={12}>
                         <h2>Projects</h2>
                         <p>Descripción</p>
                         <Tab.Container id='projects-tabs' defaultActiveKey='first'>
-                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills">
                                 <Nav.Item>
                                     <Nav.Link eventKey="first">Tab One</Nav.Link>
                                 </Nav.Item>
