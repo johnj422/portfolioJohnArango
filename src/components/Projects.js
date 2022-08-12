@@ -33,13 +33,13 @@ export default function Projects() {
     
     return (
         <Router>
-        <section className='project' id='project'>
+        <section className='project' id='projects'>
             <Container>
                 <Row>
                     <Col size={12}>
                             <div>
                             <h2>Projects</h2>
-                            <p>Descripción</p>
+                            <p></p>
                             </div>
                             <Tab.Container id='projects-tabs' defaultActiveKey='first'>
                                 {/* <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills">

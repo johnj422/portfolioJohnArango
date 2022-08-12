@@ -25,7 +25,7 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setButtonText('Sending...');
-        fetch('http://localhost:5001/contact', {
+        fetch('https://portfolio-johnarango.vercel.app/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'Application/json;charset=utf-8',
