@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import contactImg from '../assets/img/contact-img.svg';
+import contactImg from '../assets/img/contact-img.png';
 
 export default function Contact() {
     const formInitialDetails = {
@@ -25,17 +25,17 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setButtonText('Sending...');
-        fetch('https://portfolio-johnarango.vercel.app/contact', {
+        fetch('https://actionforms.io/e/r/contact-johnarango', {
             method: 'POST',
             headers: {
                 'Content-Type': 'Application/json;charset=utf-8',
             },
             body: JSON.stringify(formDetails),
         })
-        .then(response => response.json())
         .then(data=>{
+
             setButtonText('Send');
-            if(data.code === 200){
+            if(data.status === 200){
                 setStatus({success: true, message: 'Message successfully sent'});
             } else {
                 setStatus({success: false, message: 'Something went wrong, please try again later'})
@@ -55,7 +55,7 @@ export default function Contact() {
                         <img src={contactImg} alt='Contacto' />
                     </Col>
                     <Col md={6}>
-                        <h2>Ponte en contacto!</h2>
+                        <h2>Let's! Connect</h2>
                         <form onSubmit={handleSubmit}>
                             <Row>
                                 <Col sm={6} className='px-1'>
