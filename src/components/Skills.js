@@ -13,6 +13,7 @@ import HtmlLogo from '../assets/img/HTML.svg'
 import CssLogo from '../assets/img/CSS.svg'
 import Scrum from '../assets/img/Scrum.svg'
 import colorSharp from '../assets/img/color-sharp.png'
+import Firebase from '../assets/img/Firebase.svg'
 
 export default function Skills() {
     const responsive = {
@@ -80,6 +81,10 @@ export default function Skills() {
                                 <div className='item'>
                                     <img src={Scrum} alt='Scrum' />
                                     <h5>Scrum</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={Firebase} alt='Firebase' />
+                                    <h5>Firebase</h5>
                                 </div>
                             </Carousel>
                         </div>
